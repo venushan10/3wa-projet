@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap');
+
+:root{
+  --color: #ff9800;
+  --color2: #880101;
+  --shadow: 0px 0px 70px rgba(0,0,0,0.2);
+  --shadow2: 0px 5px 5px -5px rgba(0,0,0,.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px !important;
+    overflow-x: hidden; 
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.ligne {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vcenter {
+    display: flex;
+    justify-content: center;
+}
+
+hcenter {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fstart{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.w10 {width:10%;}
+
+.w20 {width:20%;}
+
+.w30 {width:30%;}
+
+.w40 {width:40%;}
+
+.w50 {width:50%;}
+
+.w60 {width:60%;}
+
+.w70 {width:70%;}
+
+.w80 {width:80%;}
+
+.w90 {width:90%;}
+
+.w100 {width:100%;}
+
+.hover { 
+    transition: all .4s; box-shadow: var(--shadow); 
+    
+}
+
+.hover:hover {
+    cursor: pointer;
+    box-shadow: var(--shadow-light); transform: translateY(10px); 
+    
+}
+
+.bttn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 12px 17px 12px;
+    margin: 15px 20px 15px;
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    background-color: rgba(255, 165, 0, .7);
+}
+
+
+
+
+
+
+
+
+
+
+
+header .logo img {
+    width: 100px;
+    max-height: 50px;
+}
+
+header {
+    background-color: rgba(0,0,0,.5);
+    padding: 25px 0;
+    margin: 0 0 50px;
+    box-shadow: var(--shadow);
+}
+
+header nav > a, header nav .onglet-list p {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    padding: 15px 20px;
+    border-bottom: 5px solid rgba(0,0,0,0);
+    transition: .7s border-bottom;
+    margin:0;
+}
+
+header nav > a:hover, header nav .onglet-list:hover p {
+    color: white;
+    text-decoration: none;
+    border-color: orange;
+}
+
+header nav .onglet-list {
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .onglet-list ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding:0;
+    bottom:-74px;
+}
+
+header nav .onglet-list:hover ul {
+    display: block;
+
+}
+
+header nav .onglet-list ul li {
+    background-color: white;
+    list-style-type: none;
+    padding: 7px 10px;
+    margin:0;
+    margin-bottom:1px;
+}
+
+
+header nav .onglet-list ul a {
+    color: black;
+    font-size: 1rem;
+    text-decoration: uppercase;
+    text-decoration: none;
+}
+
+header nav .userName {
+    font-size: 1.2rem;
+    color: var(--color);
+    font-weight: bold;
+    padding: 15px 20px;
+    margin:0;
+    margin-bottom:5px;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #121212;
+    padding: 100px 0;
+}
+
+footer h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom:15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+footer .contact img {
+    width: 15px;
+    height: 15px;
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+.affiche {
+    padding: 25px 0 25px; 
+}
+
+.affiche .saison {
+    display: none;
+}
+
+.affiche .saison:first-child {
+    display: block;
+}
+
+.affiche h2 {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.affiche img {
+    height: 700px;
+}
+
+.affiche .nav a {
+    color: rgba(255,255,255,.8);
+    margin:5px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+.synopsis {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.synopsis .container {
+    max-width: 1600px;
+}
+
+.synopsis img {
+    width:100%;
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+}
+
+.synopsis h2 {
+    color: var(--color2);
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 25px;
+}
+
+.synopsis p {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.arcs .arc {
+    background-color: rgba(255,255,255,.7);
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+}
+
+.arcs .arc h2 {
+    color: var(--color2);
+    font-size: 2rem;
+    font-weight:bold;
+}
+
+#arcEdit form {
+    width: 50%;
+    background-color:rgba(255,255,255, .5);
+    margin: 0 0 25px;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+}
+
+#arcEdit form input {
+    width: 100%;
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+#arcEdit form [type='textarea'] {
+    min-height: 200px;
+    font-size: 1rem;
+}
+
+#arcEdit form [type='submit'] {
+    width: unset;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.target .countComment {
+    transition: all .4s;
+    color: blue;
+}
+
+.target .countComment:hover{
+    color: var(--color2);
+}
+
+
+
+
+
+
+
+
+
+
+.comments h2 {
+    color: white;
+}
+
+
+.comments .comment {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 3px;
+}
+
+.comments .comment .head {
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    margin-bottom: 7px;
+}
+
+.comments .comment .box {
+    display: flex;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: var(--color2);
+    color: white;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+
+.comments .comment .time {
+    background-color: rgba(33, 150, 243, .7);
+}
+
+
+.comments .comment .pseudo {
+    background-color: rgba(63, 81, 181, .7);
+}
+
+.comments .comment .text {
+    padding:15px 20px;
+    background-color: rgba(18, 62, 94, .8);
+    font-size: 1.2rem;
+}
+
+.comments form {
+    background-color: rgba(255,255,255,.5);
+    color: white;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:25px;
+}
+
+.comments form #textarea {
+    border: none;
+    border-radius: 3px;
+    overflow: auto;
+    outline: none;
+    padding:15px 20px;
+    background-color: rgba(18, 62, 94, .8);
+    font-size: 1.2rem;
+    color:white;
+    display: block;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.trailers .trailer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+}
+
+
+.trailers .trailer h2 {
+    color: var(--color);
+    text-align: center;
+}
+
+.trailers .trailer video {
+    box-shadow: var(--shadow);
+}
+
+
+
+
+
+
+.persos {
+    display: flex;
+    flex-direction: row;
+}
+
+.persos .perso {
+    background-color: rgba(255,255,255,.7);
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+}
+
+
+.persos .perso .img img {
+    width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+.login form, .register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 25px;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    margin:100px 0 100px;
+}
+
+.login form input, .register form input {
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************** POUR MOBILE */
+
+
+@media(max-width:768px){
+    
+    
+    .m-w100{
+        width: 100%;
+    }
+
+
+    .m-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .m-colonne {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    header nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .affiche img {
+        width:100%;
+    }
+    
+    
+    
+    
+    
+    
+}
+
